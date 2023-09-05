@@ -58,7 +58,7 @@ resource "oci_containerengine_cluster" "test_cluster" {
   compartment_id     = var.parent_compartmend_ocid
   kubernetes_version = local.component_versions.kubernetes
   name               = "oke-change-me"
-  vcn_id             = "var.lz_spoke_vcn_ocid"
+  vcn_id             = var.lz_spoke_vcn_ocid
 
   #Optional
   cluster_pod_network_options {
