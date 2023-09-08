@@ -1,8 +1,7 @@
 # ora-lz-k8s-iac-devsecops
 
 ## Lets get started
-Go to the [OCI Shell](https://cloud.oracle.com/?&bdcstate=maximized&cloudshell=true) and run the following startup command:
-<a href="https://cloud.oracle.com/?&bdcstate=maximized&cloudshell=true" target="_blank">OCI Shell</a>
+Go to the [OCI Shell](https://cloud.oracle.com/?&bdcstate=maximized&cloudshell=true) (`🖱️ right click > Open in New Tab`) and run the following startup command:
 ```sh
 source <(curl -fsSL "https://gist.githubusercontent.com/saguadob/a8588a6f95b69e7085bba31d6d82d626/raw/configure-gh-in-oci-shell.sh")
 ```
