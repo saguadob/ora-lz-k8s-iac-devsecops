@@ -2,6 +2,7 @@
 
 ## Lets get started
 Go to the [OCI Shell](https://cloud.oracle.com/?&bdcstate=maximized&cloudshell=true) and run the following startup command:
+<a href="[http://stackoverflow.com](https://cloud.oracle.com/?&bdcstate=maximized&cloudshell=true)" target="_blank">OCI Shell</a>
 ```sh
 source <(curl -fsSL "https://gist.githubusercontent.com/saguadob/a8588a6f95b69e7085bba31d6d82d626/raw/configure-gh-in-oci-shell.sh")
 ```
