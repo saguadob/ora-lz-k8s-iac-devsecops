@@ -67,10 +67,8 @@ resource "oci_containerengine_cluster" "test_cluster" {
   }
 
   endpoint_config {
-
-    # Optional
     is_public_ip_enabled = false
-    # nsg_ids = var.cluster_endpoint_config_nsg_ids
+     nsg_ids = [ oci_core_network_security_group.oke.id ]
     subnet_id = var.lz_spoke_app_subnet_id
   }
   options {

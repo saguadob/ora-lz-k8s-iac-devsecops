@@ -30,3 +30,7 @@ variable "lz_spoke_app_subnet_id" {
 variable "lz_spoke_web_subnet_id" {
   type = string
 }
+
+variable "bastion_cidr" {
+  type = string
+}

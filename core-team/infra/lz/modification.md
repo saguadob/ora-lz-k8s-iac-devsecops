@@ -1,0 +1,1 @@
+- Security list from `-dmz-vcn-indoor-subnet-security-list` to allow traffic to spokes
