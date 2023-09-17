@@ -23,3 +23,11 @@ variable "app_k8s_subnet_id" {
 variable "bastion_client_cidr_block_allow_list" {
   type = list(string)
 }
+
+variable "spoke_app_cidr" {
+  type = string
+}
+
+variable "lz_spoke_vcn_ocid" {
+  type = string
+}

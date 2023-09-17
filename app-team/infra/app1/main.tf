@@ -25,6 +25,16 @@ provider "oci" {
 locals {
   resource_label_prefix = "app1"
   component_versions = {
-    kubernetes = "v1.25.4"
+    kubernetes = "v1.27.2"
   }
+
+  ad_number_to_name = {
+    for ad in data.oci_identity_availability_domains.ad_list.availability_domains :
+    parseint(substr(ad.name, -1, -1), 10) => ad.name
+  }
+  ad_numbers = keys(local.ad_number_to_name)
+}
+
+data "oci_identity_availability_domains" "ad_list" {
+  compartment_id = var.parent_compartmend_ocid
 }
