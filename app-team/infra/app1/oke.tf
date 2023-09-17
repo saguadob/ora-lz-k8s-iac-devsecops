@@ -99,14 +99,14 @@ resource "oci_containerengine_node_pool" "app" {
       }
     }
 
-    size = 1
-    nsg_ids = [ oci_core_network_security_group.workers.id ]
+    size    = 1
+    nsg_ids = [oci_core_network_security_group.workers.id]
   }
 
   node_shape_config {
 
     #Optional
-    memory_in_gbs = "1"
+    memory_in_gbs = "4"
     ocpus         = "1"
   }
 
