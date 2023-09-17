@@ -7,6 +7,10 @@ terraform {
       version               = ">= 4.80.0"
       configuration_aliases = [oci.home]
     }
+    tls = {
+      source  = "hashicorp/tls"
+      version = ">= 4.0.4"
+    }
   }
 }
 
