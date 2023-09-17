@@ -31,3 +31,11 @@ variable "spoke_app_cidr" {
 variable "lz_spoke_vcn_ocid" {
   type = string
 }
+
+variable "dmz_services_nsg_ocid" {
+  type = string
+}
+
+variable "outdoor_subnet_id" {
+  type = string
+}

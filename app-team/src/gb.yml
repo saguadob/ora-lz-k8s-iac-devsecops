@@ -112,6 +112,7 @@ metadata:
     service.beta.kubernetes.io/oci-load-balancer-shape: "flexible"
     service.beta.kubernetes.io/oci-load-balancer-shape-flex-min: "10"
     service.beta.kubernetes.io/oci-load-balancer-shape-flex-max: "10"
+    service.beta.kubernetes.io/oci-load-balancer-security-list-management-mode: "All"
 spec:
   # comment or delete the following line if you want to use a LoadBalancer
   # if your cluster supports it, uncomment the following to automatically create

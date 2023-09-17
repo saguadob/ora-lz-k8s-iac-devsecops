@@ -15,7 +15,7 @@ resource "oci_core_security_list" "bastion" {
   compartment_id = var.compartment_id
   vcn_id         = var.lz_spoke_vcn_ocid
 
-  display_name = "sl-app-oke-bastionm"
+  display_name = "sl-app-oke-bastion"
   egress_security_rules {
     #Required
     destination = var.spoke_app_cidr
@@ -48,7 +48,7 @@ resource "oci_core_subnet" "test_subnet" {
 resource "oci_bastion_bastion" "test_bastion" {
   #Required
   name             = "bst-app-operator"
-  bastion_type     = "standard"
+  bastion_type     = "STANDARD"
   compartment_id   = var.compartment_id
   target_subnet_id = oci_core_subnet.test_subnet.id
 

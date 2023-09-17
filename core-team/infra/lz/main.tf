@@ -25,7 +25,7 @@ module "lz" {
   hs_advanced_options                 = true
   dmz_vcn_cidr                        = "10.0.0.0/24"
   public_src_bastion_cidrs            = []
-  public_src_lbr_cidrs                = []
+  public_src_lbr_cidrs                = ["0.0.0.0/0"]
   public_dst_cidrs                    = []
   network_admin_email_endpoints       = ["example@example.com"]
   security_admin_email_endpoints      = ["example@example.com"]
