@@ -68,7 +68,7 @@ resource "oci_containerengine_cluster" "app" {
 
   endpoint_config {
     is_public_ip_enabled = false
-    nsg_ids              = [oci_core_network_security_group.oke.id]
+    nsg_ids              = [oci_core_network_security_group.oke.id, oci_core_network_security_group.cp.id]
     subnet_id            = var.lz_spoke_app_subnet_id
   }
   options {
@@ -100,7 +100,9 @@ resource "oci_containerengine_node_pool" "app" {
     }
 
     size = 1
+    nsg_ids = [ oci_core_network_security_group.workers.id ]
   }
+
   node_shape_config {
 
     #Optional
@@ -109,7 +111,7 @@ resource "oci_containerengine_node_pool" "app" {
   }
 
   node_source_details {
-    image_id    = "ocid1.image.oc1.eu-frankfurt-1.aaaaaaaad6yd35dgltyh4jsoda2s3tgi2dgxcqh6q52ab7txdkz5u6ihc2wa"
+    image_id    = "ocid1.image.oc1.eu-frankfurt-1.aaaaaaaazhullkkvbfsuooy2nutdxf3v2orqskhzjb3bzgeovnrimpyx3vra"
     source_type = "IMAGE"
   }
 

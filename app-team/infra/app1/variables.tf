@@ -7,6 +7,10 @@ variable "region" {
   }
 }
 
+variable "label_prefix" {
+  type = string
+}
+
 variable "parent_compartmend_ocid" {
   type = string
 }
