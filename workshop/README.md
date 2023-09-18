@@ -64,12 +64,21 @@ Let's simulate the journey of a team that is going to deploy a workload in a [Gr
           ```
     - Configure your working directory in git
       ```sh
-      gh repo fork saguadob/oci-cis-landingzone-workshop-nose --fork-name oci-cis-landingzone-workshop --clone --remote=true --remote-name=origin
-      cd oci-cis-landingzone-workshop
+      gh repo fork saguadob/ora-lz-k8s-iac-devsecops --fork-name ora-lz-k8s-iac-devsecops --clone --remote=true --remote-name=origin
+      cd ora-lz-k8s-iac-devsecops
 
       git config user.name "$(gh api user -q .login)"
       git config user.email "$(gh api user/public_emails -q first.email)"
-      gh repo set-default "$(gh api user -q .login)/oci-cis-landingzone-workshop"
+      gh repo set-default "$(gh api user -q .login)/ora-lz-k8s-iac-devsecops"
       git remote rm upstream
+      ```
+    - Configure your OCI variables.
+      ```sh
+      echo $OCI_CS_USER_OCID
+      ```
+      If the value is different from the format `ocid1.user.oc1..xyz` the go to the OCI Cloud Console and copy the value from `Upper right corner :bust_in_silhouette: -> Your profile -> OCID -> Copy`, and set it in your Cloud Shell profile
+      ```sh
+      echo 'export OCI_CLI_USER="<your-ocid>"' >> ~/.bashrc
+      export OCI_CLI_USER="<your-ocid>"
       ```
     
