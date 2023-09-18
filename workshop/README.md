@@ -78,7 +78,6 @@ Let's simulate the journey of a team that is going to deploy a workload in a [Gr
       ```
       If the value is different from the format `ocid1.user.oc1..xyz` the go to the OCI Cloud Console and copy the value from `Upper right corner :bust_in_silhouette: -> Your profile -> OCID -> Copy`, and set it in your Cloud Shell profile
       ```sh
-      echo 'export OCI_CLI_USER="<your-ocid>"' >> ~/.bashrc
-      export OCI_CLI_USER="<your-ocid>"
+      export OCI_CLI_USER="your_ocid" && echo "export OCI_CLI_USER=\"${OCI_CLI_USER}\"" >> ~/.bashrc
       ```
     
