@@ -7,4 +7,12 @@ We are going to focus on the following two areas
 - Cloud Native Development Concepts
 
 ## Agenda
-- :man_teacher: :woman_teacher:
+1. :man_teacher: :woman_teacher: Intro & _Pitch_ of OCI :o2: :cloud: and its differenciators
+2. :tv: OKE Use case and discussions
+3. Hands-on Go-through
+    1. Landing Zones (LZ :flight_arrival:) in OCI :o2: :cloud:.
+    2. Deploy a workload inside a LZ.
+        - Terraform as a Dev Team :man_technologist: :woman_technologist:.
+        - OCI Kubernetes Engine (OKE) in a landing zone.
+    3. Operating Kubernetes (k8s) and good practices.
+    4. :cloud: Cloud Native Development Concepts
