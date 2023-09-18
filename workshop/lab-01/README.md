@@ -21,7 +21,7 @@ flowchart LR
     subgraph Github
     Repo --> Net[Network TF Config]
     Repo --> App[App TF Config]
-    Repo((Workshop repo)) --> LZ[LZ TF Config]
+    Repo((Workshop repo :octocat:)) --> LZ[LZ TF Config]
     end
     subgraph OCI CLOUD
     ORM(Resource Manager) --> VCS_CONFIG[ORM Git Config]
