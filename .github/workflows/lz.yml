@@ -68,7 +68,7 @@ jobs:
         uses: oracle-actions/run-oci-cli-command@v1.1.1
         id: create-gh-pr-stack
         with:
-          command: 'resource-manager stack create-from-git-provider --compartment-id "${{ secrets.OCI_CLI_TENANCY }}" --config-source-configuration-source-provider-id ${{ fromJson(steps.create-gh-pr-git-config.outputs.output) }} --config-source-branch-name "refs/pull/${{ github.event.number }}/head" --config-source-repository-url "https://github.com/${{ github.repository }}" --config-source-working-directory lz --display-name "stack-gh-pr-${{ github.event.number }}-action-${{ github.run_id }}" --terraform-version "1.2.x" --variables "{\"tenancy_ocid\":\"${{ secrets.OCI_CLI_TENANCY }}\" , \"region\":\"${{ secrets.OCI_CLI_REGION }}\"}"'
+          command: 'resource-manager stack create-from-git-provider --compartment-id "${{ secrets.OCI_CLI_TENANCY }}" --config-source-configuration-source-provider-id ${{ fromJson(steps.create-gh-pr-git-config.outputs.output) }} --config-source-branch-name "refs/pull/${{ github.event.number }}/head" --config-source-repository-url "https://github.com/${{ github.repository }}" --config-source-working-directory "core-team/infra/lz" --display-name "stack-gh-pr-${{ github.event.number }}-action-${{ github.run_id }}" --terraform-version "1.2.x" --variables "{\"tenancy_ocid\":\"${{ secrets.OCI_CLI_TENANCY }}\" , \"region\":\"${{ secrets.OCI_CLI_REGION }}\"}"'
           query: "data.id"
           silent: false
 
@@ -91,7 +91,7 @@ jobs:
       - uses: actions/github-script@v6
         if: success() && github.event_name == 'pull_request'
         env:
-          PLAN: "OCI speculative terraform plan \n https://cloud.oracle.com/resourcemanager/jobs/${{ fromJson(steps.run-tf-plan.outputs.output) }}"
+          PLAN: "https://cloud.oracle.com/resourcemanager/jobs/${{ fromJson(steps.run-tf-plan.outputs.output) }}"
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
