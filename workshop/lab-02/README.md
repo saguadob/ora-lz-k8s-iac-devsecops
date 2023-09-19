@@ -50,4 +50,5 @@ Let's inspect the file [`lz.yml`](../../.github/workflows/lz.yml). This action i
 - Run a speculative plan
 - Post the plan so the reviewers can understand the impact of the changes.
 
-Let's try to run it. IF you see a fail don't worry
+Let's try to run it. IF you see a fail don't worry, we need to do extra configuration of our repository for the automation to work
+

@@ -31,7 +31,7 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v4
-      
+
       - uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.2.9
@@ -54,6 +54,7 @@ jobs:
         id: find-compartment-id
         with:
           command: 'resource-manager stack get-stack-tf-state --file oci-tf.tfstate --stack-id "${{ vars.OCI_LZ_STACK_ID }}"'
+          silent: false
 
       - name: Create PR git connection
         uses: oracle-actions/run-oci-cli-command@v1.1.1
