@@ -23,10 +23,6 @@ variable "hub_vcn_cidr" {
   type = string
 }
 
-variable "ig_route_table_ocid" {
-  type = string
-}
-
 variable "lz_spoke_app_subnet_id" {
   type = string
 }
