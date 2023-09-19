@@ -32,9 +32,13 @@ docker pull gcr.io/google-samples/gb-frontend-arm64:v6
 docker tag gcr.io/google-samples/gb-frontend-arm64:v6 fra.ocir.io/nose/sebcegal-cir-app1/gb-frontend:v6
 docker push fra.ocir.io/nose/sebcegal-cir-app1/gb-frontend:v6
 ```
-# Task 2 - Redeploy and updated workload definition
+## Task 2 - Redeploy and updated workload definition
 
 Now we can deploy an updated version of the workload using the k8s defintion file [`gb.yml`](../../app-team/src/gb.yml).
 ```sh
 kubectl apply -f app-team/src/gb.yml -n gb
 ```
+
+# Some agnostic Cloud Native concepts
+- [The twelve-factor App](https://12factor.net/)
+- Discussion: Opinionated technology stacks in k8s (PPT)
