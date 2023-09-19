@@ -1,9 +1,18 @@
-# ora-lz-k8s-iac-devsecops
+# Platform Engineering + Modern Cloud Development in OCI
 
-## Lets get started
-Go to the [OCI Shell](https://cloud.oracle.com/?&bdcstate=maximized&cloudshell=true) (`🖱️ right click > Open in New Tab`) and run the following startup command:
-```sh
-source <(curl -fsSL "https://gist.githubusercontent.com/saguadob/a8588a6f95b69e7085bba31d6d82d626/raw/configure-gh-in-oci-shell.sh")
-```
-This command executes the script in this Gist file 📃 [`configure-gh-in-oci-shell.sh`](https://gist.github.com/saguadob/a8588a6f95b69e7085bba31d6d82d626).
-The script downloads and add the [Github CLI](https://cli.github.com) to your path
+## Welcome!
+This workshop is meant for you to have a first approach on how to implement both working metodologies and solutions in Oracle Cloud Infrastructure [OCI](https://www.oracle.com/cloud).
+We are going to focus on the following two areas
+- Platform Engineering
+- Cloud Native Development Concepts
+
+## Agenda
+1. :man_teacher: :woman_teacher: Intro & _Pitch_ of OCI :o2: :cloud: and its differenciators
+2. :tv: OKE Use case and discussions
+3. Hands-on Go-through
+    1. Landing Zones (LZ :flight_arrival:) in OCI :o2: :cloud:.
+    2. Deploy a workload inside a LZ.
+        - Terraform as a Dev Team :man_technologist: :woman_technologist:.
+        - OCI Kubernetes Engine (OKE) in a landing zone.
+    3. Operating Kubernetes (k8s) and good practices.
+    4. :cloud: Cloud Native Development Concepts
