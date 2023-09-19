@@ -1,0 +1,10 @@
+tenancy_ocid                         = "ocid1.tenancy.oc1..xyz"
+region                               = "eu-frankfurt-1"
+compartment_id                       = "ocid1.compartment.oc1..xyz"
+prefix_service_label                 = "my-prefix"
+app_k8s_subnet_id                    = "ocid1.subnet.oc1.eu-frankfurt-1.xyz"
+bastion_client_cidr_block_allow_list = ["A.B.C.D/24"]
+spoke_app_cidr                       = "A.B.C.D/24"
+lz_spoke_vcn_ocid                    = "ocid1.vcn.oc1.eu-frankfurt-1.xyz"
+dmz_services_nsg_ocid                = "ocid1.networksecuritygroup.oc1.eu-frankfurt-1.xyz"
+outdoor_subnet_id                    = "ocid1.subnet.oc1.eu-frankfurt-1.xyz"
