@@ -10,13 +10,11 @@ locals {
   vcn_cidr = "10.0.1.0/24" #TODO
 
   # subnet cidrs - used by subnets
-  bastion_subnet = "10.0.1.48/28"
+  bastion_subnet = var.bastion_cidr
 
   cp_subnet = "10.0.1.16/28"
 
   int_lb_subnet = "10.0.1.0/28"
-
-  operator_subnet = ""
 
   pub_lb_subnet = "10.0.1.0/28"
 

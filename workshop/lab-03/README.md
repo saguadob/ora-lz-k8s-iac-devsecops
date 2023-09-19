@@ -1,4 +1,4 @@
-# Lab 03 - Deploying a workload
+# Lab 03 - Deploying a Workload infrastructure
 
 ## Goals
 In this lab we are going to deploy a OKE cluster and using the additional components required to run a workload
@@ -24,7 +24,7 @@ lz_spoke_vcn_ocid                    = "ocid1.vcn.oc1.eu-frankfurt-1.xyz"
 dmz_services_nsg_ocid                = "ocid1.networksecuritygroup.oc1.eu-frankfurt-1.xyz"
 outdoor_subnet_id                    = "ocid1.subnet.oc1.eu-frankfurt-1.xyz"
 ```
-After modifying the variables team, deploy the network functions
+After modifying the variables file, deploy the network functions
 ```sh
 terraform init
 terraform validate
@@ -67,7 +67,13 @@ lz_spoke_vcn_ocid                    = "ocid1.vcn.oc1.eu-frankfurt-1.xyz"
 dmz_services_nsg_ocid                = "ocid1.networksecuritygroup.oc1.eu-frankfurt-1.xyz"
 outdoor_subnet_id                    = "ocid1.subnet.oc1.eu-frankfurt-1.xyz"
 ```
-
+After modifying the variables file, deploy the OKE functions
+```sh
+terraform init
+terraform validate
+terraform plan
+terrafom apply
+```
 ``` sh
 
 export oke_ocid="<oke>"
