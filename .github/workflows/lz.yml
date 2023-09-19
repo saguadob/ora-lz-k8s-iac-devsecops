@@ -88,17 +88,6 @@ jobs:
           query: "data.id"
           silent: false
 
-      - name: Get speculative plan
-        uses: oracle-actions/run-oci-cli-command@v1.1.1
-        id: fetch-plan
-        with:
-          command: "resource-manager job get-job-tf-state --file ${{ runner.temp }}/pr-plan.tfplan --job-id ${{ fromJson(steps.run-tf-plan.outputs.output) }}"
-          silent: false
-
-      - name: Terraform Validate
-        id: parse-tfplan
-        run: terraform show -no-color ${{ runner.temp }}/pr-plan.tfplan
-
       - uses: actions/github-script@v6
         if: success() && github.event_name == 'pull_request'
         env:
@@ -130,13 +119,7 @@ jobs:
 
             #### Terraform Plan 📖\`${{ steps.run-tf-plan.outcome }}\`
 
-            <details><summary>Show Plan</summary>
-
-            \`\`\`\n
-            ${process.env.PLAN}
-            \`\`\`
-
-            </details>
+            Plan Output URL = \`${process.env.PLAN}\`
 
             *Pusher: \`${{ github.actor }}\`, Action: \`${{ github.event_name }}\`, Working Directory: \`${{ env.tf_actions_working_dir }}\`, Workflow: \`${{ github.workflow }}\`*`;
 

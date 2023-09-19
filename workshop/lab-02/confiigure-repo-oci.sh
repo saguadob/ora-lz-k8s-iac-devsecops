@@ -11,5 +11,5 @@ gh secret set OCI_CLI_USER --body "$OCI_CLI_USER"
 gh secret set OCI_CLI_REGION --body "$OCI_REGION"
 gh secret set OCI_CLI_TENANCY --body "$OCI_TENANCY"
 gh secret set OCI_CLI_FINGERPRINT --body "$GH_OCI_KEY_FINGERPRINT"
-gh secret set OCI_CLI_KEY_CONTENT < ~/oci_api_key.pem
+gh secret set OCI_CLI_KEY_CONTENT < ~/oci_cli_api_key.pem
 gh variable set OCI_LZ_STACK_ID --body "$OCI_LZ_STACK_OCID"
