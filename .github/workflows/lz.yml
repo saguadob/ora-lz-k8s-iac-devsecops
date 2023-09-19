@@ -31,10 +31,7 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v4
-        with:
-          sparse-checkout: |
-            .github
-            core-team/infra/lz
+      
       - uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.2.9
@@ -102,7 +99,7 @@ jobs:
         run: terraform show -no-color ${{ runner.temp }}/pr-plan.tfplan
 
       - uses: actions/github-script@v6
-        if: github.event_name == 'pull_request'
+        if: success() && github.event_name == 'pull_request'
         env:
           PLAN: "OCI speculative terraform plan \n https://cloud.oracle.com/resourcemanager/jobs/${{ fromJson(steps.run-tf-plan.outputs.output) }}"
         with:
