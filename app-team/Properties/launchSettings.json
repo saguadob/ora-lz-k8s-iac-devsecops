@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:5120",
+      "environmentVariables": {
+        "PGUSER": "postgres",
+        "PGPASSWORD": "postgres",
+        "PG_CONNECTIONSTIRNG": "HOST=db; Database=postgres"
+      }
+    }
+  }
+}
