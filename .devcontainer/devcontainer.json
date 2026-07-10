@@ -1,0 +1,71 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/dotnet
+{
+	"name": "Work",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		"ghcr.io/devcontainers/features/python:1": {
+			// https://github.com/devcontainers/features/tree/main/src/python#options
+			"installTools": true,
+			"toolsToInstall": "oci-cli"
+		}
+	},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [5000, 5001],
+	// "portsAttributes": {
+	//		"5001": {
+	//			"protocol": "https"
+	//		}
+	// }
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "dotnet restore",
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.vscode-github-actions",
+				"Oracle.oci-vscode-toolkit",
+				"ms-dotnettools.csdevkit",
+				"GitHub.vscode-pull-request-github",
+				"GitHub.remotehub",
+				"GitHub.codespaces",
+				"dbaeumer.vscode-eslint",
+				"ms-vscode-remote.remote-containers",
+				"redhat.vscode-yaml",
+				"EditorConfig.EditorConfig",
+				"ms-ossdata.vscode-pgsql"
+			]
+		},
+		"codespaces": {
+			"repositories": {}
+		}
+	},
+	"secrets": {
+		"OCI_CLI_USER": {
+			"description": "The OCID of the user calling the API. Example: `ocid1.user.oc1..<unique_ID>`",
+			"documentationUrl": "https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/clienvironmentvariables.htm"
+		},
+		"OCI_CLI_TENANCY": {
+			"description": "An Oracle Cloud Infrastructure region. Example: `ocid1.tenancy.oc1..<unique_ID>`",
+			"documentationUrl": "https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/clienvironmentvariables.htm"
+		},
+		"OCI_CLI_FINGERPRINT": {
+			"description": "The fingerprint for the public key that was added to this user. Example: `20:3b:97:13:55:1c:5b:0d:d3:37:d8:50:4e:c5:3a:34`",
+			"documentationUrl": "https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/clienvironmentvariables.htm"
+		},
+		"OCI_CLI_KEY_CONTENT": {
+			"description": "The full content of the private key enclosed in single quotes. Important: The key pair must be in PEM format. Example: `$ export OCI_CLI_KEY_CONTENT='$(</path/to/oci_api_key.pem)'`",
+			"documentationUrl": "https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/clienvironmentvariables.htm"
+		},
+		"OCI_CLI_REGION": {
+			"description": "An Oracle Cloud Infrastructure region. Example: `us-ashburn-1`",
+			"documentationUrl": "https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/clienvironmentvariables.htm"
+		}
+	}
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
