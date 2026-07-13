@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "C#: Linker.Web [http]",
+      "name": "C#: Linker [http]",
       "type": "dotnet",
       "request": "launch",
       "projectPath": "${workspaceFolder}/app-team/src/app.cs",

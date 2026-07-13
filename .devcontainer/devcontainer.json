@@ -37,7 +37,8 @@
 				"ms-vscode-remote.remote-containers",
 				"redhat.vscode-yaml",
 				"EditorConfig.EditorConfig",
-				"ms-ossdata.vscode-pgsql"
+				"ms-ossdata.vscode-pgsql",
+				"humao.rest-client"
 			]
 		},
 		"codespaces": {
