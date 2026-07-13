@@ -65,7 +65,9 @@
 			"description": "An Oracle Cloud Infrastructure region. Example: `us-ashburn-1`",
 			"documentationUrl": "https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/clienvironmentvariables.htm"
 		}
-	}
+	},
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
+	"remoteUser": "vscode",
+	"updateRemoteUserUID": true
 }
