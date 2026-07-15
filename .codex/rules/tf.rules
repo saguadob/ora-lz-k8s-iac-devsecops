@@ -1,0 +1,11 @@
+prefix_rule(
+    pattern = ["terraform", "apply"],
+    decision = "forbidden",
+    justification = "Infrastructure changes must be applied manually.",
+)
+
+prefix_rule(
+    pattern = ["kubectl", "delete"],
+    decision = "forbidden",
+    justification = "Destructive cluster operations are not delegated.",
+)
